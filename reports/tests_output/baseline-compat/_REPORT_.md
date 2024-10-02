@@ -11,9 +11,9 @@
 | 102|    4| 106|   96% | tests output -compat I  quick  | tests_output/baseline-compat/tests/baseline_compat/quick |
 | 191|   24| 215|   88% | tests output -compat I  hyperon-experimental  | tests_output/baseline-compat/tests/baseline_compat/hyperon-experimental_scripts |
 | 212|4  17| 229|   90% | tests output -compat I  hyperon-mettalog sanity | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity |
-| 668|4  50| 718|   92% | tests output -compat           | tests_output/baseline-compat/ |
-| 668|4  50| 718|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-| 668|4  50| 718|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
+| 669|4  50| 719|   92% | tests output -compat           | tests_output/baseline-compat/ |
+| 669|4  50| 719|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+| 669|4  50| 719|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
 
 
 
@@ -38,6 +38,18 @@
 |     0 |     1 |      0%  | [debug_mettalogTestCurried.metta](https://logicmoo.org/public/mettreportstests/baseline_compat/anti-regression/debug_mettalogTestCurried.metta.html) |
 |       |       |          |                                                                                |
 |    46 |     4 |     92%  | Total                                                                          |
+|       |       |          |                                                                                |
+
+
+|  Pass |  Fail |  Percent | File/Module/Directory Information                                                                              |
+|-------|-------|----------|----------------------------------------------------------------------------------------------------|
+|       |       |          |                                                                                |
+|       |       |          | Dir: ./tests_output/baseline-compat/tests/baseline_compat                      |
+|       |       |          | Mod: tests output -compat I                                                    |
+|       |       |          |                                                                                |
+|     1 |     0 |    100%  | [rust_01.metta](https://logicmoo.org/public/mettreportstests/baseline_compat/rust_01.metta.html) |
+|       |       |          |                                                                                |
+|     1 |     0 |    100%  | Total                                                                          |
 |       |       |          |                                                                                |
 
 
@@ -221,9 +233,9 @@
 | 102|    4| 106|   96% | tests output -compat I  quick  | tests_output/baseline-compat/tests/baseline_compat/quick |
 | 191|   24| 215|   88% | tests output -compat I  hyperon-experimental  | tests_output/baseline-compat/tests/baseline_compat/hyperon-experimental_scripts |
 | 212|4  17| 229|   90% | tests output -compat I  hyperon-mettalog sanity | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity |
-| 668|4  50| 718|   92% | tests output -compat           | tests_output/baseline-compat/ |
-| 668|4  50| 718|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-| 668|4  50| 718|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
+| 669|4  50| 719|   92% | tests output -compat           | tests_output/baseline-compat/ |
+| 669|4  50| 719|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+| 669|4  50| 719|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
 
 
 |Pass|EFail|Totl|Percent| Module | Directory |
@@ -237,7 +249,7 @@
 |   4|    0|   4|  100% | tests output -compat I  anti-regression issues metta-wam-issue-116 | tests_output/baseline-compat/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116 |
 |   4|    0|   4|  100% | tests output -compat I  anti-regression issues | tests_output/baseline-compat/tests/baseline_compat/anti-regression/issues |
 |  50|    4|  54|   92% | tests output -compat I  anti-regression | tests_output/baseline-compat/tests/baseline_compat/anti-regression |
-| 668|4  50| 718|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-| 668|4  50| 718|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
-| 668|4  50| 718|   92% | tests output -compat           | tests_output/baseline-compat/ |
+| 669|4  50| 719|   92% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+| 669|4  50| 719|   92% | tests output -compat tests     | tests_output/baseline-compat/tests |
+| 669|4  50| 719|   92% | tests output -compat           | tests_output/baseline-compat/ |
 [?7h
