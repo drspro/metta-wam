@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -44,7 +45,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 18:10:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 17:44:28+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -184,7 +185,7 @@ Deterministic: ()
 >  (superpose ((foo $_112330 $_112352) (foo 1 2) (foo 3 4) (foo $_112330 10) (foo $_112330 $_112330)))
 </span>; 
 ; EVAL TEST
-; took 0.006 secs. (6.36 milliseconds) 
+; took 0.007 secs. (6.65 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space31 
@@ -220,7 +221,7 @@ Deterministic: ()
 >  (superpose ((foo 1 2) (foo 5 6) (foo $_143400 $_143422)))
 </span>; 
 ; EVAL TEST
-; took 0.003 secs. (3.01 milliseconds) 
+; took 0.003 secs. (3.24 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space32 
@@ -256,7 +257,7 @@ Deterministic: ()
 >  (superpose ((foo 3 4) (foo 5 6)))
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.36 milliseconds) 
+; took 0.001 secs. (1.28 milliseconds) 
 
   !(assertEqualToResult 
     (add-atom &space33 
@@ -287,7 +288,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.04</h3>
 ; 
 ; EVAL TEST
-; took 0.059 secs. (59.09 milliseconds) 
+; took 0.061 secs. (61.37 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -322,7 +323,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.05</h3>
 ; 
 ; EVAL TEST
-; took 0.013 secs. (13.25 milliseconds) 
+; took 0.013 secs. (13.31 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -359,7 +360,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000271 secs. (271.09 microseconds) 
+; took 0.000291 secs. (291.27 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -389,7 +390,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.07</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.48 milliseconds) 
+; took 0.009 secs. (9.43 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -430,7 +431,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.08</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (7.95 milliseconds) 
+; took 0.008 secs. (7.83 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -467,7 +468,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.09</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (9.21 milliseconds) 
+; took 0.009 secs. (9.05 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -508,7 +509,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.10</h3>
 ; 
 ; EVAL TEST
-; took 0.008 secs. (8.20 milliseconds) 
+; took 0.008 secs. (8.11 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -549,7 +550,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SPACE-SUBTRACTION-TESTS.11</h3>
 ; 
 ; EVAL TEST
-; took 0.006 secs. (6.36 milliseconds) 
+; took 0.006 secs. (6.38 milliseconds) 
 
   !(assertEqual 
     (union 
@@ -574,7 +575,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 1,201,208 inferences, 0.304 CPU in 0.304 seconds (100% CPU, 3947646 Lips)
+>% 1,201,208 inferences, 0.312 CPU in 0.312 seconds (100% CPU, 3851244 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/space_subtraction_tests.metta  0)
 <span class="ansi1"
@@ -608,8 +609,13 @@ Deterministic: ()
 ;           (set_option_value  compat auto)
 P;HTML|
 ;           (set_option_value  compatio true)
-
-Script done on 2024-10-09 18:10:12+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 17:44:33+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

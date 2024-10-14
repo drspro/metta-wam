@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -27,7 +28,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 18:15:16+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 17:50:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -113,7 +114,7 @@ Script started on 2024-10-09 18:15:16+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-MORPH-TESTS.ZEROARGS.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000362 secs. (361.55 microseconds) 
+; took 0.000333 secs. (332.70 microseconds) 
 
   !(assertEqualToResult 
     (z) 
@@ -143,7 +144,7 @@ Deterministic: ()
 >;; METTA-MORPH-TESTS.ZEROARGS.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000329 secs. (328.87 microseconds) 
+; took 0.000251 secs. (251.44 microseconds) 
 
   !(assertEqualToResult 
     (f) 
@@ -158,7 +159,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 99,721 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 2225741 Lips)
+>% 99,721 inferences, 0.045 CPU in 0.045 seconds (100% CPU, 2213816 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta-morph_tests/zeroargs.metta  0)
 <span class="ansi1"
@@ -192,8 +193,13 @@ Deterministic: ()
 ;           (set_option_value  compat auto)
 P;HTML|
 ;           (set_option_value  compatio true)
-
-Script done on 2024-10-09 18:15:21+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 17:50:05+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

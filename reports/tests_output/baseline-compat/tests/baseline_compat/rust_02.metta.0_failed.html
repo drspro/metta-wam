@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-255165000 { color: #FFA500; }
@@ -23,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 18:16:14+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 17:51:04+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -83,7 +84,7 @@ Script started on 2024-10-09 18:16:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 1  "[()]")
 P;HTML|
-;                                           (= 2  "0.04user 0.00system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 24768maxresident)k")
+;                                           (= 2  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 24648maxresident)k")
 P;HTML|
 ;                                           (= 2  "0inputs+0outputs (0major+2845minor)pagefaults 0swaps")
 P;HTML|
@@ -109,7 +110,7 @@ Script started on 2024-10-09 18:16:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; BASELINE-COMPAT.RUST-02.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000773 secs. (773.37 microseconds) 
+; took 0.000688 secs. (688.26 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -126,7 +127,7 @@ Script started on 2024-10-09 18:16:14+00:00 [TERM="xterm-256color" TTY="/dev/pts
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 81,163 inferences, 0.041 CPU in 0.041 seconds (100% CPU, 1967953 Lips)
+>% 81,151 inferences, 0.041 CPU in 0.041 seconds (100% CPU, 1956583 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/rust_02.metta  0)
 <span class="ansi1"
@@ -160,8 +161,13 @@ Deterministic: ()
 ;           (set_option_value  compat auto)
 P;HTML|
 ;           (set_option_value  compatio true)
-
-Script done on 2024-10-09 18:16:19+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 17:51:09+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

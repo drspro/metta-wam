@@ -13,6 +13,7 @@
 .inv_foreground { color: #000000; }
 .inv_background { background-color: #AAAAAA; }
 .ansi1 { font-weight: bold; }
+.ansi31 { color: #aa0000; }
 .ansi32 { color: #00aa00; }
 .ansi36 { color: #00aaaa; }
 .ansi38-013099040 { color: #0D6328; }
@@ -30,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-10-09 18:10:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-10-14 17:44:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -109,7 +110,7 @@ Script started on 2024-10-09 18:10:26+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.051 secs. (51.45 milliseconds) 
+; took 0.048 secs. (48.11 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -142,7 +143,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.29 milliseconds) 
+; took 0.001 secs. (1.23 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -175,7 +176,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.42 milliseconds) 
+; took 0.002 secs. (2.27 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -206,7 +207,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.06 milliseconds) 
+; took 0.000998 secs. (997.59 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -237,7 +238,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000985 secs. (984.75 microseconds) 
+; took 0.001 secs. (1.05 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -266,7 +267,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000916 secs. (916.10 microseconds) 
+; took 0.000859 secs. (859.34 microseconds) 
 
   !(assertEqual 
     (unique (subtraction (superpose (a b b c)) (superpose (b c c d)))) 
@@ -295,7 +296,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000820 secs. (819.87 microseconds) 
+; took 0.000804 secs. (803.92 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -326,7 +327,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000597 secs. (597.31 microseconds) 
+; took 0.000712 secs. (712.42 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -357,7 +358,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000701 secs. (700.96 microseconds) 
+; took 0.000710 secs. (710.33 microseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -388,7 +389,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SUBTRACTION-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.12 milliseconds) 
+; took 0.002 secs. (1.96 milliseconds) 
 
   !(assertEqual 
     (subtraction 
@@ -405,7 +406,7 @@ Deterministic: ()
 Deterministic: ()
 ()]
 <span class="ansi32"
->% 447,634 inferences, 0.139 CPU in 0.139 seconds (100% CPU, 3211130 Lips)
+>% 447,634 inferences, 0.136 CPU in 0.136 seconds (100% CPU, 3295000 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/subtraction_test.metta  0)
 <span class="ansi1"
@@ -439,8 +440,13 @@ Deterministic: ()
 ;           (set_option_value  compat auto)
 P;HTML|
 ;           (set_option_value  compatio true)
-
-Script done on 2024-10-09 18:10:31+00:00 [COMMAND_EXIT_CODE="7"]
+<span class="ansi31"
+>  (in  
+    (maybe_halt  7) 
+    (unwind  
+      (halt  7)))
+</span>
+Script done on 2024-10-14 17:44:54+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
