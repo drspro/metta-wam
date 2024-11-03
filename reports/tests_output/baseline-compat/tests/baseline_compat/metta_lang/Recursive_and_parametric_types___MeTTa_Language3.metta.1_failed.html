@@ -31,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-01 17:11:06+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-03 10:52:22+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -103,7 +103,7 @@ Script started on 2024-11-01 17:11:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 5  "Missed result: BadType)]")
 P;HTML|
-;                                           (= 5  "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 25800maxresident)k")
+;                                           (= 5  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25972maxresident)k")
 P;HTML|
 ;                                           (= 5  "0inputs+0outputs (0major+3116minor)pagefaults 0swaps")
 P;HTML|
@@ -134,7 +134,7 @@ Script started on 2024-11-01 17:11:06+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000304 secs. (304.41 microseconds) 
+; took 0.000317 secs. (317.01 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 79 ") 
@@ -160,7 +160,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000718 secs. (718.40 microseconds) 
+; took 0.000777 secs. (777.14 microseconds) 
 
   !(assertEqualToResult 
     (get-type (ConsNum 1 (ConsNum 2 (ConsNum 3 NilNum)))) 
@@ -192,7 +192,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000234 secs. (233.67 microseconds) 
+; took 0.000206 secs. (205.74 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 80 ") 
@@ -219,7 +219,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.000956 secs. (955.81 microseconds) 
 
   !(assertEqualToResult 
     (ConsNum 1 
@@ -237,7 +237,7 @@ Deterministic: ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (Ba
 ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (BadType))))]
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 192,295 inferences, 0.065 CPU in 0.065 seconds (100% CPU, 2980180 Lips)
+>% 192,297 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 3042347 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language3.metta  0)
 <span class="ansi1"
@@ -277,7 +277,7 @@ Deterministic: ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (Ba
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-11-01 17:11:11+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-03 10:52:27+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

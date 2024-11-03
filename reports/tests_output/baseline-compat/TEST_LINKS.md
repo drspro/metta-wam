@@ -10,10 +10,10 @@
 | 102|    4| 106|   96% | tests output -compat I  quick  | tests_output/baseline-compat/tests/baseline_compat/quick |
 | 198|   24| 222|   89% | tests output -compat I  hyperon-experimental  | tests_output/baseline-compat/tests/baseline_compat/hyperon-experimental_scripts |
 | 212|4  17| 229|   90% | tests output -compat I  hyperon-mettalog sanity | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity |
-| 324|1  58| 382|   84% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
-|1000|6 106|1106|   89% | tests output -compat           | tests_output/baseline-compat/ |
-|1000|6 106|1106|   89% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-|1000|6 106|1106|   89% | tests output -compat tests     | tests_output/baseline-compat/tests |
+| 423|1  66| 489|   86% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
+|1099|6 114|1213|   90% | tests output -compat           | tests_output/baseline-compat/ |
+|1099|6 114|1213|   90% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+|1099|6 114|1213|   90% | tests output -compat tests     | tests_output/baseline-compat/tests |
 
 
 
@@ -199,9 +199,13 @@
 |     2 |     0 |    100%  | [Basic_evaluation___MeTTa_Language10.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language10.metta.html) |
 |     1 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language2.metta.html) |
 |     6 |     0 |    100%  | [Recursion_and_control___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language2.metta.html) |
+|     2 |     0 |    100%  | [Metatypes___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language9.metta.html) |
+|     6 |     0 |    100%  | [Console_output_and_debugging___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language3.metta.html) |
 |     4 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language3.metta.html) |
+|     6 |     0 |    100%  | [Control_flow___MeTTa_Language15.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language15.metta.html) |
 |     3 |     0 |    100%  | [Basic_evaluation___MeTTa_Language14.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language14.metta.html) |
 |     4 |     0 |    100%  | [Basic_grounded_functions___MeTTa_Language6.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_grounded_functions___MeTTa_Language6.metta.html) |
+|    15 |     1 |     93%  | [Controlling_pattern_matching___MeTTa_Language12.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language12.metta.html) |
 |     1 |     0 |    100%  | [Control_flow___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language9.metta.html) |
 |     1 |     0 |    100%  | [Handling_nondeterministic_results___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language2.metta.html) |
 |     0 |     1 |      0%  | [Basic_evaluation___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language4.metta.html) |
@@ -209,31 +213,45 @@
 |     1 |     1 |     50%  | [Recursive_and_parametric_types___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language8.metta.html) |
 |     3 |     1 |     75%  | [Free_variables_and_nondeterminism_again,_recursively___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Free_variables_and_nondeterminism_again,_recursively___MeTTa_Language1.metta.html) |
 |     2 |     0 |    100%  | [Concrete_types___MeTTa_Language10.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language10.metta.html) |
+|     2 |     0 |    100%  | [Control_flow___MeTTa_Language12.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language12.metta.html) |
 |     2 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language5.metta.html) |
 |     5 |     0 |    100%  | [Basic_grounded_functions___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_grounded_functions___MeTTa_Language1.metta.html) |
 |     2 |     0 |    100%  | [Recursion_and_control___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language4.metta.html) |
+|     2 |     0 |    100%  | [Querying_space_content___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Querying_space_content___MeTTa_Language4.metta.html) |
 |     2 |     0 |    100%  | [Basic_evaluation___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language2.metta.html) |
+|     3 |     1 |     75%  | [Metatypes___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language8.metta.html) |
 |     1 |     0 |    100%  | [Basic_evaluation___MeTTa_Language13.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language13.metta.html) |
 |     7 |     0 |    100%  | [Working_with_spaces___MeTTa_Language12.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language12.metta.html) |
 |     0 |     2 |      0%  | [Console_output_and_debugging___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language1.metta.html) |
+|     2 |     0 |    100%  | [Console_output_and_debugging___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta.html) |
 |     6 |     0 |    100%  | [Concrete_types___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language7.metta.html) |
 |     4 |     0 |    100%  | [Functions_and_unification___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Functions_and_unification___MeTTa_Language4.metta.html) |
+|     4 |     0 |    100%  | [Control_flow___MeTTa_Language10.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language10.metta.html) |
 |     4 |     0 |    100%  | [Handling_nondeterministic_results___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language1.metta.html) |
+|     4 |     0 |    100%  | [Recursion_and_control___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language8.metta.html) |
 |     1 |     1 |     50%  | [Functions_and_unification___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Functions_and_unification___MeTTa_Language5.metta.html) |
 |     2 |     0 |    100%  | [Basic_grounded_functions___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_grounded_functions___MeTTa_Language2.metta.html) |
 |     1 |     0 |    100%  | [Concrete_types___MeTTa_Language14.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language14.metta.html) |
+|     8 |     0 |    100%  | [Control_flow___MeTTa_Language16.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language16.metta.html) |
 |     6 |     0 |    100%  | [Recursion_and_control___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language3.metta.html) |
 |     1 |     1 |     50%  | [Handling_nondeterministic_results___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language3.metta.html) |
 |     2 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language4.metta.html) |
 |     1 |     0 |    100%  | [Basic_evaluation___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language8.metta.html) |
+|     4 |     0 |    100%  | [Control_flow___MeTTa_Language11.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language11.metta.html) |
+|     1 |     1 |     50%  | [Control_flow___MeTTa_Language14.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language14.metta.html) |
 |     2 |     0 |    100%  | [Recursive_and_parametric_types___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language9.metta.html) |
 |     1 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language3.metta.html) |
 |     2 |     0 |    100%  | [Control_flow___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language7.metta.html) |
 |     1 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language7.metta.html) |
+|     5 |     1 |     83%  | [Functions_and_unification___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Functions_and_unification___MeTTa_Language7.metta.html) |
+|     1 |     1 |     50%  | [Console_output_and_debugging___MeTTa_Language10.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language10.metta.html) |
 |     6 |     2 |     75%  | [Recursive_and_parametric_types___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language5.metta.html) |
+|     4 |     0 |    100%  | [Querying_space_content___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Querying_space_content___MeTTa_Language2.metta.html) |
 |     1 |     0 |    100%  | [Concrete_types___MeTTa_Language11.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language11.metta.html) |
 |     4 |     0 |    100%  | [Handling_nondeterministic_results___MeTTa_Language6.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language6.metta.html) |
 |     1 |     1 |     50%  | [Recursive_and_parametric_types___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language4.metta.html) |
+|     2 |     0 |    100%  | [Control_flow___MeTTa_Language13.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language13.metta.html) |
+|     2 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language8.metta.html) |
 |     6 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language11.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language11.metta.html) |
 |     2 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language5.metta.html) |
 |     1 |     0 |    100%  | [Basic_evaluation___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language7.metta.html) |
@@ -253,18 +271,23 @@
 |     2 |     1 |     66%  | [Recursive_and_parametric_types___MeTTa_Language6.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language6.metta.html) |
 |     0 |     2 |      0%  | [Concrete_types___MeTTa_Language6.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language6.metta.html) |
 |     6 |     0 |    100%  | [Functions_and_unification___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Functions_and_unification___MeTTa_Language2.metta.html) |
+|     4 |     0 |    100%  | [Recursion_and_control___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language9.metta.html) |
 |     2 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language7.metta.html) |
 |     1 |     1 |     50%  | [Working_with_spaces___MeTTa_Language17.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language17.metta.html) |
+|     2 |     0 |    100%  | [Free_variables_and_nondeterminism_again_recursively___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Free_variables_and_nondeterminism_again_recursively___MeTTa_Language5.metta.html) |
 |     4 |     1 |     80%  | [Concrete_types___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language5.metta.html) |
 |     4 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language4.metta.html) |
 |     2 |     0 |    100%  | [Concrete_types___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language8.metta.html) |
 |     4 |     0 |    100%  | [Functions_and_unification___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Functions_and_unification___MeTTa_Language3.metta.html) |
+|     6 |     2 |     75%  | [Console_output_and_debugging___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language5.metta.html) |
 |     4 |     0 |    100%  | [Handling_nondeterministic_results___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language5.metta.html) |
 |     2 |     0 |    100%  | [Nested_queries_and_recursive_graph_traversal___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Nested_queries_and_recursive_graph_traversal___MeTTa_Language2.metta.html) |
 |     2 |     0 |    100%  | [Control_flow___MeTTa_Language8.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language8.metta.html) |
 |     2 |     0 |    100%  | [Basic_evaluation___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_evaluation___MeTTa_Language1.metta.html) |
 |     2 |     0 |    100%  | [Metatypes___MeTTa_Language4.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language4.metta.html) |
 |     4 |     0 |    100%  | [Concrete_types___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language1.metta.html) |
+|     9 |     0 |    100%  | [Console_output_and_debugging___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language2.metta.html) |
+|     2 |     0 |    100%  | [Operations_over_atoms___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Operations_over_atoms___MeTTa_Language9.metta.html) |
 |     4 |     0 |    100%  | [Recursive_and_parametric_types___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language2.metta.html) |
 |     6 |     2 |     75%  | [Metatypes___MeTTa_Language2.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Metatypes___MeTTa_Language2.metta.html) |
 |     3 |     1 |     75%  | [Recursive_and_parametric_types___MeTTa_Language3.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language3.metta.html) |
@@ -298,12 +321,13 @@
 |     2 |     0 |    100%  | [Basic_grounded_functions___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Basic_grounded_functions___MeTTa_Language7.metta.html) |
 |     1 |     1 |     50%  | [Concrete_types___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language9.metta.html) |
 |     4 |     0 |    100%  | [Handling_nondeterministic_results___MeTTa_Language7.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language7.metta.html) |
+|     3 |     1 |     75%  | [Querying_space_content___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Querying_space_content___MeTTa_Language5.metta.html) |
 |     2 |     0 |    100%  | [Working_with_spaces___MeTTa_Language5.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language5.metta.html) |
 |     1 |     0 |    100%  | [Recursion_and_control___MeTTa_Language1.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Recursion_and_control___MeTTa_Language1.metta.html) |
 |     1 |     3 |     25%  | [Concrete_types___MeTTa_Language13.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Concrete_types___MeTTa_Language13.metta.html) |
 |     3 |     0 |    100%  | [Controlling_pattern_matching___MeTTa_Language9.metta](https://logicmoo.org/public/metta/reports/tests_output/baseline-compat/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language9.metta.html) |
 |       |       |          |                                                                                |
-|   324 |    59 |     84%  | Total                                                                          |
+|   423 |    67 |     86%  | Total                                                                          |
 |       |       |          |                                                                                |
 
 
@@ -364,17 +388,17 @@
 | 102|    4| 106|   96% | tests output -compat I  quick  | tests_output/baseline-compat/tests/baseline_compat/quick |
 | 198|   24| 222|   89% | tests output -compat I  hyperon-experimental  | tests_output/baseline-compat/tests/baseline_compat/hyperon-experimental_scripts |
 | 212|4  17| 229|   90% | tests output -compat I  hyperon-mettalog sanity | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity |
-| 324|1  58| 382|   84% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
-|1000|6 106|1106|   89% | tests output -compat           | tests_output/baseline-compat/ |
-|1000|6 106|1106|   89% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-|1000|6 106|1106|   89% | tests output -compat tests     | tests_output/baseline-compat/tests |
+| 423|1  66| 489|   86% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
+|1099|6 114|1213|   90% | tests output -compat           | tests_output/baseline-compat/ |
+|1099|6 114|1213|   90% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+|1099|6 114|1213|   90% | tests output -compat tests     | tests_output/baseline-compat/tests |
 
 
 |Pass|EFail|Totl|Percent| Module | Directory |
 |----|-----|----|-------|--------|-----------|
 | 102|    4| 106|   96% | tests output -compat I  quick  | tests_output/baseline-compat/tests/baseline_compat/quick |
 |  22|    1|  23|   95% | tests output -compat I  module-system | tests_output/baseline-compat/tests/baseline_compat/module-system |
-| 324|1  58| 382|   84% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
+| 423|1  66| 489|   86% | tests output -compat I  metta lang | tests_output/baseline-compat/tests/baseline_compat/metta_lang |
 |  90|    0|  90|  100% | tests output -compat I  metta-morph tests | tests_output/baseline-compat/tests/baseline_compat/metta-morph_tests |
 |   4|2   0|   4|   66% | tests output -compat I  hyperon-mettalog sanity synth buffer | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity/synth_buffer |
 | 212|4  17| 229|   90% | tests output -compat I  hyperon-mettalog sanity | tests_output/baseline-compat/tests/baseline_compat/hyperon-mettalog_sanity |
@@ -382,7 +406,7 @@
 |   4|    0|   4|  100% | tests output -compat I  anti-regression issues metta-wam-issue-116 | tests_output/baseline-compat/tests/baseline_compat/anti-regression/issues/metta-wam-issue-116 |
 |   4|    0|   4|  100% | tests output -compat I  anti-regression issues | tests_output/baseline-compat/tests/baseline_compat/anti-regression/issues |
 |  50|1   2|  52|   94% | tests output -compat I  anti-regression | tests_output/baseline-compat/tests/baseline_compat/anti-regression |
-|1000|6 106|1106|   89% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
-|1000|6 106|1106|   89% | tests output -compat tests     | tests_output/baseline-compat/tests |
-|1000|6 106|1106|   89% | tests output -compat           | tests_output/baseline-compat/ |
+|1099|6 114|1213|   90% | tests output -compat I         | tests_output/baseline-compat/tests/baseline_compat |
+|1099|6 114|1213|   90% | tests output -compat tests     | tests_output/baseline-compat/tests |
+|1099|6 114|1213|   90% | tests output -compat           | tests_output/baseline-compat/ |
 [?7h
