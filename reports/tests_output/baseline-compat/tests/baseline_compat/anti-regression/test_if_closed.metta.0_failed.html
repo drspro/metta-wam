@@ -63,7 +63,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-06 17:17:07+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-22 17:43:35+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -209,7 +209,7 @@ Script started on 2024-11-06 17:17:07+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.01</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.47 milliseconds) 
+; took 0.002 secs. (1.59 milliseconds) 
 
   !(assertEqualToResult 
     (is-variable $x) 
@@ -240,7 +240,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000866 secs. (865.89 microseconds) 
+; took 0.000951 secs. (950.95 microseconds) 
 
   !(assertEqualToResult 
     (is-variable 1) 
@@ -271,7 +271,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000863 secs. (862.88 microseconds) 
+; took 0.000979 secs. (979.38 microseconds) 
 
   !(assertEqualToResult 
     (is-expression $x) 
@@ -302,7 +302,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.28 milliseconds) 
+; took 0.001 secs. (1.31 milliseconds) 
 
   !(assertEqualToResult 
     (is-expression (⍃ 4 3)) 
@@ -333,7 +333,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.05</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.12 milliseconds) 
+; took 0.001 secs. (1.16 milliseconds) 
 
   !(assertEqualToResult 
     (is-expression (⍃ 4 $x)) 
@@ -364,7 +364,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000842 secs. (841.60 microseconds) 
+; took 0.000862 secs. (862.14 microseconds) 
 
   !(assertEqualToResult 
     (is-expression 4) 
@@ -395,7 +395,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.07</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.19 milliseconds) 
+; took 0.001 secs. (1.28 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed $x) 
@@ -426,7 +426,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.08</h3>
 ; 
 ; EVAL TEST
-; took 0.002 secs. (2.12 milliseconds) 
+; took 0.002 secs. (2.13 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed 4) 
@@ -457,7 +457,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.09</h3>
 ; 
 ; EVAL TEST
-; took 0.009 secs. (8.58 milliseconds) 
+; took 0.009 secs. (8.69 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ $y 3)) 
@@ -488,7 +488,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.10</h3>
 ; 
 ; EVAL TEST
-; took 0.013 secs. (13.30 milliseconds) 
+; took 0.014 secs. (13.68 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ 4 $x)) 
@@ -519,7 +519,7 @@ Deterministic: ()
 >;; ANTI-REGRESSION.TEST-IF-CLOSED.11</h3>
 ; 
 ; EVAL TEST
-; took 0.015 secs. (15.42 milliseconds) 
+; took 0.016 secs. (15.54 milliseconds) 
 
   !(assertEqualToResult 
     (is-closed (⍃ 4 3)) 
@@ -535,7 +535,7 @@ Deterministic: ()
 ()]
 ;;; rust gets stuck / mettalog true
 <span class="ansi32"
->% 624,612 inferences, 0.153 CPU in 0.153 seconds (100% CPU, 4094159 Lips)
+>% 624,732 inferences, 0.151 CPU in 0.151 seconds (100% CPU, 4139840 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/anti-regression/test_if_closed.metta  0)
 <span class="ansi1"
@@ -575,7 +575,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-11-06 17:17:12+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-22 17:43:40+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

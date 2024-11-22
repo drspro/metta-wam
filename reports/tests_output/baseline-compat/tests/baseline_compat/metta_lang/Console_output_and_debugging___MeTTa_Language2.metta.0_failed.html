@@ -42,7 +42,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-06 17:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-22 17:59:00+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -118,9 +118,9 @@ Script started on 2024-11-06 17:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 7  "Excessive result: Number)]")
 P;HTML|
-;                                           (= 7  "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 25880maxresident)k")
+;                                           (= 7  "0.04user 0.00system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26272maxresident)k")
 P;HTML|
-;                                           (= 7  "0inputs+0outputs (0major+3124minor)pagefaults 0swaps")
+;                                           (= 7  "0inputs+0outputs (0major+3132minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language2.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language2.metta)
 
@@ -151,7 +151,7 @@ Script started on 2024-11-06 17:31:40+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000325 secs. (324.51 microseconds) 
+; took 0.000326 secs. (326.17 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 1 ") 
@@ -179,7 +179,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000392 secs. (391.53 microseconds) 
+; took 0.000387 secs. (387.01 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -213,7 +213,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000208 secs. (207.82 microseconds) 
+; took 0.000212 secs. (212.01 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 2 ") 
@@ -241,7 +241,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000362 secs. (362.36 microseconds) 
+; took 0.000345 secs. (345.10 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -276,7 +276,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000206 secs. (206.29 microseconds) 
+; took 0.000215 secs. (214.86 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 3 ") 
@@ -302,7 +302,7 @@ Deterministic: ()
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE2.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000496 secs. (496.22 microseconds) 
+; took 0.000500 secs. (500.03 microseconds) 
 
   !(assertEqualToResult 
     (get-type (trace! (Expecting 3) (+ 1 2))) 
@@ -349,7 +349,7 @@ Deterministic: (println "xx 5 ")
 (Expecting 3)
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.40 milliseconds) 
+; took 0.001 secs. (1.33 milliseconds) 
 
   !(assertEqualToResult 
     (my-trace 
@@ -392,7 +392,7 @@ Deterministic: (println "xx 6 ")
 "Who is Anna`s parent?"
 ; 
 ; EVAL TEST
-; took 0.000711 secs. (710.51 microseconds) 
+; took 0.000737 secs. (737.44 microseconds) 
 
   !(assertEqualToResult 
     (trace! "Who is Anna`s parent?" 
@@ -436,7 +436,7 @@ Deterministic: (println "xx 7 ")
 "Who is Bob`s child?"
 ; 
 ; EVAL TEST
-; took 0.000725 secs. (724.87 microseconds) 
+; took 0.000717 secs. (717.02 microseconds) 
 
   !(assertEqualToResult 
     (trace! "Who is Bob`s child?" 
@@ -455,7 +455,7 @@ Deterministic: ()
 ()]
 ;;;  "Who is Bob`s child?"
 <span class="ansi32"
->% 369,441 inferences, 0.100 CPU in 0.100 seconds (100% CPU, 3677040 Lips)
+>% 369,549 inferences, 0.099 CPU in 0.099 seconds (100% CPU, 3728601 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language2.metta  0)
 <span class="ansi1"
@@ -495,7 +495,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-11-06 17:31:45+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-22 17:59:05+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

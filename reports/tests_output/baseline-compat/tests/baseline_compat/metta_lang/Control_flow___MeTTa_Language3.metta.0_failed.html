@@ -24,7 +24,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-06 17:32:59+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-11-22 18:00:26+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -90,9 +90,9 @@ Script started on 2024-11-06 17:32:59+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 2  "Excessive result: 7)]")
 P;HTML|
-;                                           (= 2  "0.03user 0.01system 0:00.05elapsed 96%CPU (0avgtext+0avgdata 25820maxresident)k")
+;                                           (= 2  "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 26200maxresident)k")
 P;HTML|
-;                                           (= 2  "0inputs+0outputs (0major+3107minor)pagefaults 0swaps")
+;                                           (= 2  "0inputs+0outputs (0major+3112minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language3.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language3.metta)
 
@@ -113,7 +113,7 @@ Script started on 2024-11-06 17:32:59+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.CONTROL-FLOW---METTA-LANGUAGE3.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000291 secs. (290.80 microseconds) 
+; took 0.000302 secs. (301.55 microseconds) 
 
   !(assertEqualToResult 
     (if $x 
@@ -148,7 +148,7 @@ Deterministic: ()
 >;; METTA-LANG.CONTROL-FLOW---METTA-LANGUAGE3.02</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.09 milliseconds) 
+; took 0.001 secs. (1.13 milliseconds) 
 
   !(assertEqualToResult 
     ( (foo $b 1) $b) 
@@ -157,14 +157,14 @@ Deterministic: ()
 <span class="ansi36"
 >  (loonit_success  
     (equal_enough_for_test  
-      ( (-1 $_152906)) 
-      ( (-1 $_130856))))
+      ( (-1 $_153004)) 
+      ( (-1 $_130954))))
 </span>
 Deterministic: ()
 ()]
 ;;; [(-1 False), (11 True)]
 <span class="ansi32"
->% 133,393 inferences, 0.052 CPU in 0.052 seconds (100% CPU, 2549673 Lips)
+>% 133,525 inferences, 0.054 CPU in 0.054 seconds (100% CPU, 2478677 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Control_flow___MeTTa_Language3.metta  0)
 <span class="ansi1"
@@ -204,7 +204,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-11-06 17:33:04+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-11-22 18:00:30+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
