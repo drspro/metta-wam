@@ -40,7 +40,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-11-22 18:12:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-13 18:16:36+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -108,13 +108,13 @@ Script started on 2024-11-22 18:12:44+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 4  "Expected: [(green yellow red)]")
 P;HTML|
-;                                           (= 4  "Got: [(green red yellow)]")
+;                                           (= 4  "Got: [(red yellow green)]")
 P;HTML|
 ;                                           (= 5  "Missed result: (green yellow red))]")
 P;HTML|
-;                                           (= 5  "0.03user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 25780maxresident)k")
+;                                           (= 5  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 25952maxresident)k")
 P;HTML|
-;                                           (= 5  "0inputs+0outputs (0major+3111minor)pagefaults 0swaps")
+;                                           (= 5  "0inputs+0outputs (0major+3118minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language8.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language8.metta)
 
@@ -147,7 +147,7 @@ Script started on 2024-11-22 18:12:44+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000329 secs. (328.94 microseconds) 
+; took 0.000333 secs. (333.49 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 19 ") 
@@ -173,7 +173,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000312 secs. (312.45 microseconds) 
+; took 0.000275 secs. (275.01 microseconds) 
 
   !(assertEqualToResult 
     (color) 
@@ -205,7 +205,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000220 secs. (219.92 microseconds) 
+; took 0.000214 secs. (213.80 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 20 ") 
@@ -231,7 +231,7 @@ Deterministic: ()
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000657 secs. (656.75 microseconds) 
+; took 0.000595 secs. (594.73 microseconds) 
 
   !(assertEqualToResult 
     (collapse (color)) 
@@ -269,7 +269,7 @@ Deterministic: (println "xx 21 ")
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000588 secs. (588.40 microseconds) 
+; took 0.000682 secs. (682.06 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -306,7 +306,7 @@ Deterministic: (println "xx 22 ")
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000167 secs. (166.65 microseconds) 
+; took 0.000173 secs. (173.44 microseconds) 
 
   !(assertEqualToResult 
     (superpose (1 2 3)) 
@@ -341,7 +341,7 @@ Deterministic: (println "xx 23 ")
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000367 secs. (367.06 microseconds) 
+; took 0.000378 secs. (377.54 microseconds) 
 
   !(assertEqualToResult 
     (collapse (superpose (1 2 3))) 
@@ -381,7 +381,7 @@ Deterministic: (println "xx 24 ")
 >;; METTA-LANG.HANDLING-NONDETERMINISTIC-RESULTS---METTA-LANGUAGE8.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000702 secs. (702.16 microseconds) 
+; took 0.000781 secs. (780.52 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -405,7 +405,7 @@ Deterministic: ()
 ()]
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 320,769 inferences, 0.088 CPU in 0.088 seconds (100% CPU, 3650384 Lips)
+>% 320,781 inferences, 0.088 CPU in 0.088 seconds (100% CPU, 3657363 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Handling_nondeterministic_results___MeTTa_Language8.metta  0)
 <span class="ansi1"
@@ -445,7 +445,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-11-22 18:12:49+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-13 18:16:41+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
