@@ -27,7 +27,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-13 18:11:31+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-18 10:44:52+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -85,17 +85,17 @@ Script started on 2024-12-13 18:11:31+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta)
 P;HTML|
-;                                           (= 1  "(quote ((add-bin 1) is 1))")
-P;HTML|
 ;                                           (= 1  "(quote ((add-bin 1) is 2))")
+P;HTML|
+;                                           (= 1  "(quote ((add-bin 1) is 1))")
 P;HTML|
 ;                                           (= 1  "[(println \"xx 11 \")]")
 P;HTML|
 ;                                           (= 2  "[()]")
 P;HTML|
-;                                           (= 3  "0.04user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26080maxresident)k")
+;                                           (= 3  "0.04user 0.01system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 26360maxresident)k")
 P;HTML|
-;                                           (= 3  "0inputs+0outputs (0major+3143minor)pagefaults 0swaps")
+;                                           (= 3  "0inputs+0outputs (0major+3151minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta)
 
@@ -131,7 +131,7 @@ Script started on 2024-12-13 18:11:31+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.CONSOLE-OUTPUT-AND-DEBUGGING---METTA-LANGUAGE4.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000309 secs. (309.36 microseconds) 
+; took 0.000341 secs. (341.08 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 11 ") 
@@ -175,7 +175,7 @@ Deterministic: ()
 ()]
 ;;;[STDOUT] (quote ((add-bin 1) is 2))
 <span class="ansi32"
->% 128,927 inferences, 0.050 CPU in 0.050 seconds (100% CPU, 2589128 Lips)
+>% 128,939 inferences, 0.051 CPU in 0.051 seconds (100% CPU, 2535052 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Console_output_and_debugging___MeTTa_Language4.metta  0)
 <span class="ansi1"
@@ -215,7 +215,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-13 18:11:36+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-18 10:44:56+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

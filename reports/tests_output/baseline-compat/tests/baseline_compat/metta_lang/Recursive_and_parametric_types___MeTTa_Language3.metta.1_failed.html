@@ -31,7 +31,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-13 18:20:51+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-18 10:55:10+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -103,9 +103,9 @@ Script started on 2024-12-13 18:20:51+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 5  "Missed result: BadType)]")
 P;HTML|
-;                                           (= 5  "0.03user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 25976maxresident)k")
+;                                           (= 5  "0.04user 0.00system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 25848maxresident)k")
 P;HTML|
-;                                           (= 5  "0inputs+0outputs (0major+3116minor)pagefaults 0swaps")
+;                                           (= 5  "0inputs+0outputs (0major+3114minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language3.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language3.metta)
 
@@ -134,7 +134,7 @@ Script started on 2024-12-13 18:20:51+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000367 secs. (366.94 microseconds) 
+; took 0.000366 secs. (366.18 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 79 ") 
@@ -160,7 +160,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000812 secs. (811.62 microseconds) 
+; took 0.000823 secs. (823.12 microseconds) 
 
   !(assertEqualToResult 
     (get-type (ConsNum 1 (ConsNum 2 (ConsNum 3 NilNum)))) 
@@ -192,7 +192,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000264 secs. (264.22 microseconds) 
+; took 0.000258 secs. (257.59 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 80 ") 
@@ -219,7 +219,7 @@ Deterministic: ()
 >;; METTA-LANG.RECURSIVE-AND-PARAMETRIC-TYPES---METTA-LANGUAGE3.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000987 secs. (987.15 microseconds) 
+; took 0.001 secs. (1.09 milliseconds) 
 
   !(assertEqualToResult 
     (ConsNum 1 
@@ -237,7 +237,7 @@ Deterministic: ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (Ba
 ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (BadType))))]
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 192,405 inferences, 0.064 CPU in 0.064 seconds (100% CPU, 3013225 Lips)
+>% 192,415 inferences, 0.066 CPU in 0.066 seconds (100% CPU, 2906396 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Recursive_and_parametric_types___MeTTa_Language3.metta  0)
 <span class="ansi1"
@@ -277,7 +277,7 @@ Deterministic: ((Error  (got  ((ConsNum 1 (ConsNum "S" NilNum)))) (expected  (Ba
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-13 18:20:56+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-18 10:55:15+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
