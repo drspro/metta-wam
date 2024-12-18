@@ -1,3 +1,84 @@
+(sudoku_board 1 1 1 1  )
+(sudoku_board 1 2 1 2  )
+(sudoku_board 1 3 1 3  )
+(sudoku_board 1 4 2 1  )
+(sudoku_board 1 5 2 2  )
+(sudoku_board 1 6 2 3  )
+(sudoku_board 1 7 3 1  )
+(sudoku_board 1 8 3 2  )
+(sudoku_board 1 9 3 3  )
+(sudoku_board 2 1 1 4  )
+(sudoku_board 2 2 1 5  )
+(sudoku_board 2 3 1 6  )
+(sudoku_board 2 4 2 4  )
+(sudoku_board 2 5 2 5  )
+(sudoku_board 2 6 2 6  )
+(sudoku_board 2 7 3 4  )
+(sudoku_board 2 8 3 5  )
+(sudoku_board 2 9 3 6  )
+(sudoku_board 3 1 1 7  )
+(sudoku_board 3 2 1 8  )
+(sudoku_board 3 3 1 9  )
+(sudoku_board 3 4 2 7  )
+(sudoku_board 3 5 2 8  )
+(sudoku_board 3 6 2 9  )
+(sudoku_board 3 7 3 7  )
+(sudoku_board 3 8 3 8  )
+(sudoku_board 3 9 3 9  )
+(sudoku_board 4 1 4 1  )
+(sudoku_board 4 2 4 2  )
+(sudoku_board 4 3 4 3  )
+(sudoku_board 4 4 5 1  )
+(sudoku_board 4 5 5 2  )
+(sudoku_board 4 6 5 3  )
+(sudoku_board 4 7 6 1  )
+(sudoku_board 4 8 6 2  )
+(sudoku_board 4 9 6 3  )
+(sudoku_board 5 1 4 4  )
+(sudoku_board 5 2 4 5  )
+(sudoku_board 5 3 4 6  )
+(sudoku_board 5 4 5 4  )
+(sudoku_board 5 5 5 5  )
+(sudoku_board 5 6 5 6  )
+(sudoku_board 5 7 6 4  )
+(sudoku_board 5 8 6 5  )
+(sudoku_board 5 9 6 6  )
+(sudoku_board 6 1 4 7  )
+(sudoku_board 6 2 4 8  )
+(sudoku_board 6 3 4 9  )
+(sudoku_board 6 4 5 7  )
+(sudoku_board 6 5 5 8  )
+(sudoku_board 6 6 5 9  )
+(sudoku_board 6 7 6 7  )
+(sudoku_board 6 8 6 8  )
+(sudoku_board 6 9 6 9  )
+(sudoku_board 7 1 7 1  )
+(sudoku_board 7 2 7 2  )
+(sudoku_board 7 3 7 3  )
+(sudoku_board 7 4 8 1  )
+(sudoku_board 7 5 8 2  )
+(sudoku_board 7 6 8 3  )
+(sudoku_board 7 7 9 1  )
+(sudoku_board 7 8 9 2  )
+(sudoku_board 7 9 9 3  )
+(sudoku_board 8 1 7 4  )
+(sudoku_board 8 2 7 5  )
+(sudoku_board 8 3 7 6  )
+(sudoku_board 8 4 8 4  )
+(sudoku_board 8 5 8 5  )
+(sudoku_board 8 6 8 6  )
+(sudoku_board 8 7 9 4  )
+(sudoku_board 8 8 9 5  )
+(sudoku_board 8 9 9 6  )
+(sudoku_board 9 1 7 7  )
+(sudoku_board 9 2 7 8  )
+(sudoku_board 9 3 7 9  )
+(sudoku_board 9 4 8 7  )
+(sudoku_board 9 5 8 8  )
+(sudoku_board 9 6 8 9  )
+(sudoku_board 9 7 9 7  )
+(sudoku_board 9 8 9 8  )
+(sudoku_board 9 9 9 9  )
 
 
 (sudoku_puzzle_state 1 1 1 5  )
@@ -139,25 +220,6 @@
 
 (xcount 0)
 
-(ycount 0)
-
-(act_rc 1 1)
-
-(violated 0 0 )
-
-; i need a match statement that can return 1 item 
-(act_trace 0 0 0 0)
-(false_candidate 0 0 0 )
-
-(current_action 0 0 0 0 )
-
-; backtrack_to_level
-; (act_trace $e20 $e21 )
-
-
-;(= (increment $atom) (change-state! $atom (+ 1 (get-state $atom))))
-
-
 (= (exist_temp_num $num)   
         (let $m (collapse (match &self (tempnum $num) True))
         (if (== $m ())
@@ -173,12 +235,6 @@
 ;tmp_candidate
 ;(= (add_tmp_candidates $expr)
 ; remove_tmp_candidates
-
-(= (init_a_stack )    (match &self (sudoku_puzzle_state $r $c $quad $state)    
-   (if (== $state 0)    (action_rc $r $c)     (empty)    ) 
-      )    )   
-
-
 
 (= (init_candidates )   
   ( match &self   (sudoku_number $num   )      (cell_candidate $num )  )
@@ -203,172 +259,11 @@
 (= (add_xnum (cell_xstate $r $c $sta ) )  (add-atom &self (tempnum $sta) )  )
 
 (= (add_tmp_candidate (cell_candidate $num ) )  (add-atom &self (tmp_candidate $num) )  )
-
-(= (add_act_stack (action_rc $r $c ) )  (add-atom &self (act_rc $r $c) )  )
-
-
-; candidates
-; TODO:  apply_first_candidate
-
-
-; vio
-; (= (apply_f_candidate (action_rc $r $c ) )  
-
-; OR THIS
-
-;!(remove_violations)
-;!(init_action_stack)
-;!(apply_action_from_stack (collapse  (get_all_actions)  ) )
-;!(score_cells  (collapse (all_empty_cells)  ) ) 
-;!(if_exist_violation_backtrack_stack )
-;!(puzzle_is_complete)
-
-
-(= (loop_sudoku_until_complete (coninu $yesno ) )
- (collapse 
-    (let*  (
- ($e0 (println $yesno) )
- ($e1 (remove_violations) )
- ($tr (add-atom &self (violated 0 0 ) ) )
-; ($e2 (init_action_stack) )
- ($e3 (apply_action_from_stack (collapse  (get_all_actions)  ) ) )
-; If an Action which has no valid candidates anymore  IT Should go to the next action  see function apply_action  
- ($e4 (score_cells  (collapse (all_empty_cells)  ) )  )
- ($e5 (if_exist_violation_backtrack_stack ) )
- ($e6 (puzzle_is_complete) )   
- ($e7 (+ $yesno 1) )   
-   )   
-;    (True)  
-     (if (== $e6 True) () (loop_sudoku_until_complete (coninu $e7 )) )  
-    ) 
-    )  
- )
-
-; !(exist_violation )
-; !(update_cell_state 1 2 8)
-; !(get_row_stateyz 1 3)   
-;!(get_all_actions)
-; continue here 
-; 1.1.1.1
-
-
-(= (apply_action (action_rc $r $c ) )  
- (collapse (let*  (
- ; ycount 
-
-  ($e3 (remove-atom &self (act_rc $r $c) )  )
-  ($e4 (init_check_cell  $r $c )  )
-  ($e5 ( check_cell  $r $c  ) )
-  ($levelx (increment_ycount ) )
-; false_
-;  ($e7 (: (tmp_candidate $num) $num ) )
-;  ($e8 ( print "take num"  ) )
-;  ($e9 ( print $r  ) )
-;  ($e11 ( print $c  ) )
- ; levelx
-;   ($e10 ( get_first_candidate  (collapse (get_tmp_candidates) )  ) )
-   ($e10 ( get_first_candidate  (collapse (get_tmp_candidates_not_false $levelx $r $c ) )  ) )
-; He Should Fail here if it has  no valid candidates anymore for that $r $c !! and then it should continue to next action 
-; It is not possible to put an IF statement here ?
-   ($e21 (add-atom $self (act_trace $levelx $r $c $e10)  ) )
-   ($e22 (change-state $self (current_action $levelx $r $c $e10)  ) )
-
-;   ($e8 ( print "take num"  ) )
-;   ($e9 ( print $r $c $e10  ) )
-   )
-   ( 
-; OR is it possible to put an IF statement here ?    
-  ;  True   ( tmp_candidate $num  )
-  ;  (apply_first_candidate  (collapse (get_tmp_candidates_rc) ) )  
-      update_cell_state $r $c $e10
-     ; apply_action
-    )
-    ) )
-    )
- 
-
-
 (= (remove_tmp_candidate (cell_candidate $num ) )  (remove-atom &self (tmp_candidate $num) )  )
-
 
 ;(: map-expr (-> (-> $t $t) Expression Expression))
 
 ;tmp_candidate
-  
-  
-
-;(= (apply_first_candidate $expr)
-;   (if (== $expr ()) ()
-;       (let* (($head (car-atom $expr))
-;              ($tail (cdr-atom $expr))
-;
-;              ($head-new (apply_f_candidate $head))
-;             )
-;         (cons-atom $head-new $tail)
-;       )
-;   )
-;)
-
-;              ($head-new (apply_f_candidate $head))
- ;        (cons-atom $head-new $tail)
-;          (collapse $head)
-
-(= (get_first_candidate $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-                     ($headnew (car-atom $head))
-
-             )
-            $headnew
-       )
-   )
- )
-
-
-;(= (get_first_candidate $expr)
-;   (if (== $expr ()) ()
-;       (collapse  (let* (($head (car-atom $expr))
-;              ($tail (cdr-atom $expr))
-;             )
-;            $head
-;       ) )
-;   )
-; )
-
-  
-
-
-
-(= (apply_action_from_stack $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-
-              ($head-new (apply_action $head))
-;              ($tail-new (add_a_stack $tail))
-             )
-;         (cons-atom $head-new $tail)
-         ($head-new)
-       )
-   )
-)
- 
-
-(= (add_a_stack $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-
-              ($head-new (add_act_stack $head))
-              ($tail-new (add_a_stack $tail))
-             )
-         (cons-atom $head-new $tail-new)
-       )
-   )
-)
-
-
 
 (= (add_tmp_candidates $expr)
    (if (== $expr ()) ()
@@ -410,33 +305,17 @@
    )
 )
 
-
-(= (score_cells $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-              ($head-new (score_cell $head))
-              ($tail-new (score_cells $tail))
-             )
-         (cons-atom $head-new $tail-new)
-       )
-   )
-)
-
-
-
-(= (check_violations $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-              ($head-new (check_violation $head))
-              ($tail-new (check_violations $tail))
-             )
-         (cons-atom $head-new $tail-new)
-       )
-   )
-)
-
+;(= (check_cells $expr)
+;   (if (== $expr ()) ()
+;       (let* (($head (car-atom $expr))
+;              ($tail (cdr-atom $expr))
+;              ($head-new (check_cell $head))
+;              ($tail-new (check_cells $tail))
+;             )
+;         (cons-atom $head-new $tail-new)
+;       )
+;   )
+;)
 
 
 
@@ -517,8 +396,6 @@
 
 ; (xcount 0)
 (= (get_count )  (match &self (xcount $co)    $co    )   )
-(= (get_ycount )  (match &self (ycount $co)    $co    )   )
-
 ;(= (get_count )  ( get-state xcount )  )   
 
 (= (init_count )   ( 
@@ -531,29 +408,6 @@
      True 
   )  ) )
 
-(= (set_ycount $va)   ( 
- (let*  (
-      ($was (get_ycount ) )
-      ($we  (remove-atom &self (ycount $was)) )
-      ($re (add-atom &self (ycount $va ))   )
-
-     )
-     True 
-  )  ) )
-
-
-
-(= (init_ycount )   ( 
- (let*  (
-      ($was (get_ycount ) )
-      ($we  (remove-atom &self (ycount $was)) )
-      ($re (add-atom &self (ycount 0 ))   )
-;       (change-state &self (xcount 0 )   )
-     )
-     True 
-  )  ) )
-
-
 ;(= (increment $atom) (change-state! $atom (+ 1 (get-state $atom))))
 ; (get-state (xcount $was))
 (= (increment_count )   ( 
@@ -563,18 +417,6 @@
       ($cx  (+ $was 1) )
       ($re (add-atom &self (xcount $cx ))   )
 ;      ($re (change-state &self (xcount $cx ))   )
-     )
-     $cx 
-  )  ) )
-
-
-(= (increment_ycount )   ( 
- (let*  (
-      ($was (get_ycount ) )
-      ($we  (remove-atom &self (ycount $was)) )
-      ($cx  (+ $was 1) )
-      ($re (add-atom &self (ycount $cx ))   )
-
      )
      $cx 
   )  ) )
@@ -597,13 +439,8 @@
 
  
 
-; DEBUG
-(= (all_empty_cells )    (match &self (sudoku_puzzle_state $r $c $quad $state)    
-;   (if (== $state 0)    (cell_rc $r $c)     (empty)    ) 
-   (if (== $state 9)    (cell_rc $r $c)     (empty)    ) 
-      )    )   
 
-
+(= (all_cells )    (match &self (sudoku_puzzle_state $r $c $quad $state)    (cell_rc($r $c))    )   )
 
 (= (get_cell_state $row $column)    (match &self (sudoku_puzzle_state $row $column $quad $state)    $state    )   )
 (= (get_cell_quadn $row $column)    (match &self (sudoku_puzzle_state $row $column $quadn $state)    $quadn    )   )
@@ -617,80 +454,11 @@
  
 (= (get_tmp_candidates)   (match &self   ( tmp_candidate $num  )      ($num    )          )  )
 
-
-; false  false_candidate $level $row $col $state
-(= (exist_as_false_candidate $level $r $c $num)   
-        (let $m (collapse (match &self (false_candidate $level $r $c $num) True))
-        (if (== $m ())
-            False
-            True
-        )
-    )
-             )
-
-
-; exist match    exist_as_false_candidate $level $r $c $num
-(= (get_tmp_candidates_not_false $r $c $levelx )   (match &self   ( tmp_candidate $num  )      
-;    ($num    )       
-      (if (== (exist_as_false_candidate $levelx $r $c $num) True )    (empty) ($num)    ) 
-
-       )  )
-
 (= (get_temp_nums)   (match &self   ( tempnum $num  )      ($num    )          )  )
 (= (get_temp_nums_as_candidates)   (match &self   ( tempnum $num  )      (cell_candidate $num    )          )  )
 
 
-;(act_trace 0 0 0 0)
-;(false_candidate 0 0 0 0)
-;update_cell
-;    (remove-atom &self (tempnum $num )  )    
-
-
-(= (backtrack_to_level $levelx ) (match &self   ( act_trace $level $row $col $state )   
-    (if (< $level $levelx )
-    (update_cell_state $row $col 0)
-    (True)
-    ) ) )
-
-(= (re_add_to_stack $levelx ) (match &self   ( act_trace $level $row $col $state )   
-    (if (< $level $levelx )
-    (add-atom &self (act_rc $row $col) )
-    (True)
-    ) ) )
-
-
-;(= (set_false_candidates $levelx ) (match &self   ( act_trace $level $row $col $state )   
-;    (if (< $level $levelx )
-;    (add-atom &self (false_candidate $level $row $col $state )  )
-;    (True)
-;    ) ) )
-
-(= (remove_trace $levelx ) (match &self   ( act_trace $level $row $col $state )   
-    (if (< $level $levelx )
-    (remove-atom &self (act_trace $level $row $col $state )  )
-    (True)
-    ) ) )
-
-
-; set_ycount
-; (= (set_false_candidates $levelx ) () )
- 
-
-
-
-
 (= (remove_temp_nums)   (match &self   ( tempnum $num  )   (remove-atom &self (tempnum $num )  )    )  )
-
-
-
-
-
-(= (remove_a_stack)   (match &self   ( act_rc $r $c  )   (remove-atom &self (act_rc $r $c )  )    )  )
-
-(= (get_all_actions)   (match &self   ( act_rc $r $c  )    (action_rc $r $c )     )  )
- 
-
-(= (remove_violations)   (match &self   ( violated $r $c  )   (remove-atom &self (violated $r $c )  )    )  )
 
 (= (remove_tmp_candidates)   (match &self   ( tmp_candidate $num  )   (remove-atom &self (tmp_candidate $num )  )    )  )
 
@@ -804,16 +572,23 @@
     (if (== $body ()) 
         ()
         
-         (let* (
+        (let* (
             (($head $rest) (decons-atom $body))
             
             ($r $head)
             (if (== $rest ())
                 $r
-                 (progn  $rest ))))  
+                 (progn  $rest ))))))            
 
-        ))            
 
+
+(= (check_cell $r $c )  
+(progn  
+(println "Check cell function   ")
+(remove_tmp_candidates)
+(add_tmp_candidates (collapse (init_candidates) ) )
+(remove_temp_nums)
+ (set_connected_cell_values  cell_rc($r $c) ) 
 
 ;    (get_column_stateyz_add_nums $r $c )      
 ;     (get_row_stateyz_add_nums $r $c )      
@@ -824,257 +599,25 @@
 ;    (get_quad_stateyz_add_nums (get_cell_quadn $r $c )   )  )
 
 
-
-;(= (check_cell $r $c )  
-;(progn  
-;(println "Check cell function   ")
-;(remove_tmp_candidates)
-;(add_tmp_candidates (collapse (init_candidates) ) )
-;(remove_temp_nums)
-; (set_connected_cell_values  cell_rc($r $c) ) 
-; (remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) )
+(remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) )
 ; (count_list  (collapse (get_tmp_candidates) ) )
-;  ) )
-
-; action_rc
+  ) )
 
 
-(= (init_action_stack  )  (
- 
- (collapse (let*  (
-  ($e1 (remove_a_stack) )
-  ($e2 (add_a_stack (collapse (init_a_stack) ) ) )
-;  ($e2 (add_a_stack  (init_a_stack)  ) )
-;  ($e3 (remove_temp_nums) )
-;  ($e4 (set_connected_cell_values  cell_rc($r $c) )  )
-;  ($e5 (remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) ) )
-; (count_list  (collapse (get_tmp_candidates) ) )  
-  ) 
- 
-;  (count_list  (collapse (get_tmp_candidates) ) )  
-  ( True )
-
-  )  )  ) )
-
-
-
-
-(= (init_check_cell $r $c )  (
- 
- (collapse (let*  (
-  ($e1 (remove_tmp_candidates) )
-  ($e2 (add_tmp_candidates (collapse (init_candidates) ) ) )
-  ($e3 (remove_temp_nums) )
-;  ($e4 (set_connected_cell_values  cell_rc($r $c) )  )
-;  ($e5 (remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) ) )
-; (count_list  (collapse (get_tmp_candidates) ) )  
-  ) 
- 
-;  (count_list  (collapse (get_tmp_candidates) ) )  
-  True
-
-  )  )  ) )
-
-
-
-(= (check_cell $r $c )  (
- 
- (collapse (let*  (
+;(= (check_cell $r $c )  (
+; (let*  (
 ;  ($e1 (remove_tmp_candidates) )
 ;  ($e2 (add_tmp_candidates (collapse (init_candidates) ) ) )
 ;  ($e3 (remove_temp_nums) )
-  ($e4 (set_connected_cell_values  cell_rc($r $c) )  )
-  ($e5 (remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) ) )
-; (count_list  (collapse (get_tmp_candidates) ) )  
-  ) 
+;  ($e4 (set_connected_cell_values  $r $c )  )
+;  ($e5 (remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) ) )
+;  )
  
-;  (count_list  (collapse (get_tmp_candidates) ) )  
-  True
-
-  )  )  ) )
-
-
-
-
-(= (check_violation (num_of_candidates $r $c $numx ) )  
-    (if (== $numx 0 )
-     ( is_violated )
-     ( is_not_violated )
-    )
- )
-
-
-;  True
 ; (count_list  (collapse (get_tmp_candidates) ) )
+; 
+;
+;  ) ) )
 
-
-
-; original 
-;(= (score_cell (cell_rc $r $c) )  (
-; (collapse (let*  (
-;  ($e4 (init_check_cell  $r $c )  )
-;  ($e5 ( check_cell  $r $c  ) )
-;  ) 
-; (num_of_candidates $r $c (count_list  (collapse (get_tmp_candidates) ) ) )
-;  )  )  ) )
-
-
-(= (score_cell (cell_rc $r $c) )  (
- (collapse (let*  (
-  ($e4 (init_check_cell  $r $c )  )
-  ($e5 ( check_cell  $r $c  ) )
-  ($e6 (count_list  (collapse (get_tmp_candidates) ) ) )
-; DEBUG  
-  ($e7 (if  (== $e6 2 )    (add-atom &self (violated $r $c) )    True   ) )
-;  ($e7 (if  (== $e6 0 )    (add-atom &self (violated $r $c) )    True   ) )
-  ) 
-; (num_of_candidates $r $c $e6 )
-; DEBUG  
-  (if  (== $e6 2 )   (violate_candidates $r $c $e6 )    (num_of_candidates $r $c $e6 )   )
-;  (if  (== $e6 0 )   (violate_candidates $r $c $e6 )    (num_of_candidates $r $c $e6 )   ) 
-
-  )  )  ) )
-
-; TODO implement 
-; use match  walk ( Trace , get candidates for that cell -score_cell (cell_rc $r $c), 
-; subtract false_candidates
-
-; Prolog version of this 
-;find_first_field_which_had_alternatives( Level, Row, Col , Last_used_candidate ):-
-; trace_field_assigned_reverse( Level, Row, Col ) ,
-; cell_candidates( Row, Col, Candidates ), 
-; filterout_used_candidates( Level, Row, Col , Candidates, _, Remaining_candidates  ),
-; % minimum of 2 candidates
-; Remaining_candidates = [ Last_used_candidate , _  | _Rest ] , !.
-
-; THIS IS TODO  this is the most complicated Query 
-; (= (find_level_where_there_were_alternatives)  (- (get_ycount) 1 )   )
-
-; TODO TODO this one should loop and decrement level until it finds 
-(= (find_level_where_there_were_alternatives $xlevel )  ($xlevel)   )
-
-
-; set_ycount
-(= (backtrack_to_level_where_there_were_alternatives) 
- (collapse (let*  (
-  ($ew (remove_violations) )
-  ($tr (add-atom &self (violated 0 0 ) ) )
-  ($onelevelhigher (- (get_ycount) 1 ) )
-  ($e4 (find_level_where_there_were_alternatives $onelevelhigher )  )
-  ($ex5 (set_ycount $e4 ) )
-
-; match with 1 element result as atom needed
-;  ($zy (eval (current_action $levelx $rx $cx $statex) ) )
-;  ($tz (add-atom &self (false_candidate $levelx $rx $cx $statex ) ) )
-  
-  ($e6 (backtrack_to_level $e4 ) )
-; TODO only assert the last applied as false 
-;  ($e7 (set_false_candidates $e4 ) )
-  ($e31 (re_add_to_stack $e4 ) )
-  ($e9 (remove_trace $e4 ) )
-    
-  ) 
-  True
-  )  )
-    )
-
-; puzzle_state
-; (= (all_empty_cells )    (match &self (sudoku_puzzle_state $r $c $quad $state)    
-;   
-;   (if (== $state 9)    (cell_rc $r $c)     (empty)    ) 
-;      )    )   
-
-(= (puzzle_is_complete )   
-        (let $m (collapse (match &self (sudoku_puzzle_state $r $c $quad $state) 
-;            True  
-            (if (== $state 0)    (cell_rc $r $c)     (empty)    ) 
-            )    )
-        (if (== $m ())
-            True
-            False
-            
-        )    )         )
-
-
-
-(= (exist_violation )   
-        (let $m (collapse (match &self (violated $r $c)  (if (> $r 0) True False )  ))
-        (if (== $m ())
-            False
-            True
-        )
-    )
-             )
-
-
-
-(= (if_exist_violation_backtrack_stack )  
-    (if (== exist_violation True )
-            (backtrack_to_level_where_there_were_alternatives)
-            (print "Not exist violation" )
-         
-
-        )  
-
-    )
-
-
-; cons-atom
-; add-atom
-
-;!(init_check_cell 2 9)
-;!(check_cell 2 9 )
-
-;!(init_a_stack)
-
-;!(collapse (all_empty_cells)  )
-;!(get_row_stateyz 1 3)   
-
-
-!(init_ycount)
-
-!(init_action_stack)
-; Make a Loop here 
-
-;* !(update_cell_state 1 2 8)
-;* !(get_row_stateyz 1 3)   
-;*!(get_all_actions)
-;* continue here 
-;* 1.1.1.1
-
-
-; THIS
-
-
-!(loop_sudoku_until_complete (coninu 1 ) )
-
-; OR THIS
-
-;!(remove_violations)
-;!(init_action_stack)
-;!(apply_action_from_stack (collapse  (get_all_actions)  ) )
-;!(score_cells  (collapse (all_empty_cells)  ) ) 
-;!(if_exist_violation_backtrack_stack )
-;!(puzzle_is_complete)
-
-
-; !(exist_violation )
-
-;!( check_violations  ( score_cells  (collapse (all_empty_cells)  )  )  )  
-; !( match &self   (violated $r $c )   (violated $r $c )   )
-
-; match violated
-
-
-; !(update_cell_state 2 1 7)
-;!(score_cells   (all_empty_cells)  ) 
-;!(score_cell (cell_rc 2 9 ) )
-;!(score_cell (cell_rc 2 3 ) )
-;!(score_cell (cell_rc 1 4 ) )
-
-
-
-; !(count_list  (collapse (get_tmp_candidates) ) )
 
 
 
@@ -1087,7 +630,6 @@
 
 
 ;!(update_cell_state 2 1 7)
-; apply_action
 
 ;!(get_remaining_possible_candidates)
 ;!(get_temp_nums)
@@ -1125,48 +667,40 @@
 ;!(get_quad_stateyz_add_nums (get_cell_quadn 2 9 ) )    
 
 
-; USE THIS -- does not work  This is the crucial  task  we want the code at: *1.0*   check_cell should be implemented
-; above its been tried  in multple variation 
 
-;!(remove_tmp_candidates) 
-;!(add_tmp_candidates (collapse (init_candidates) ) ) 
-;!(remove_temp_nums) 
-
-;!(init_check_cell 2 9)
+; USE THIS -- does not work 
 ;!(check_cell 2 9 )
 ;!(count_list  (collapse (get_tmp_candidates) ) )
 
-
-
 ;*********
 ; match 
-; !($cellqw (superpose (collapse (all_empty_cells) ) ) )
-;!(println  (collapse (all_empty_cells) ) )
+!($cellqw (superpose (collapse (all_cells) ) ) )
+;!(println  (collapse (all_cells) ) )
 ;!(println  $cellqw )
 
 
-; *1.0*    THIS  works well   they should be grouped in a new function which can call it with row and column (check cell )
-; *************
-;!(remove_tmp_candidates)
-;!(add_tmp_candidates (collapse (init_candidates) ) )
-;!(println  (get_tmp_candidates) )
 
-;!(println "REMAINING candidates test for 2 9 ")
-;!(println (remove_temp_nums) )
+; OR THIS  which seems to work well 
+!(remove_tmp_candidates)
+!(add_tmp_candidates (collapse (init_candidates) ) )
+!(println  (get_tmp_candidates) )
 
-;!(set_connected_cell_values  cell_rc( 2 9 ) ) 
-       ;!(set_connected_cell_values  $cellqw ) 
+!(println "REMAINING candidates test for 2 9 ")
+!(println (remove_temp_nums) )
 
-;!(println "Sudoku values for cell:  2 9 ")
-;!(println  (get_temp_nums )  )
+!(set_connected_cell_values  cell_rc( 2 9 ) ) 
+;!(set_connected_cell_values  $cellqw ) 
+
+!(println "Sudoku values for cell:  2 9 ")
+!(println  (get_temp_nums )  )
 
 
-;!(println  (get_tmp_candidates) )
-;!(println "START REmove candidates1 ")
-;!(remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) )
-;!(println "AFTER REmove candidates2 ")
-;!(println  (get_tmp_candidates) )
-;!(count_list  (collapse (get_tmp_candidates) ) )
+!(println  (get_tmp_candidates) )
+!(println "START REmove candidates1 ")
+!(remove_tmp_candidates (collapse  ( get_temp_nums_as_candidates ) ) )
+!(println "AFTER REmove candidates2 ")
+!(println  (get_tmp_candidates) )
+!(count_list  (collapse (get_tmp_candidates) ) )
 
 
 
