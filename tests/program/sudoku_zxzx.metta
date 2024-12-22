@@ -1,4 +1,4 @@
-; 13:04 22-12-2024   This program is the metta equivalent of sudoku2.pl  in the directory /src/programs/sudoku2.pl 
+
 
 (sudoku_puzzle_state 1 1 1 5  )
 (sudoku_puzzle_state 1 2 1 3  )
@@ -147,10 +147,7 @@
 
 ; i need a match statement that can return 1 item 
 (act_trace 0 0 0 0)
-(false_candidate 0 0 0 0 )
-
-; row col cand 
-(cell_candidate 0 0 0 )
+(false_candidate 0 0 0 )
 
 (current_action 0 0 0 0 )
 
@@ -170,41 +167,6 @@
     )
              )
 
-; question wether this works 
-; (if (== (exist_as_false_candidate $levelz $r $c $e10) True )  ($num)  (empty)     ) 
-; (, (act_trace $levelz $r $c $e10) (not (false_candidate $levelz $r $c $e10) ) ) 
-; (not (false_candidate $levelz $r $c $e10) )  
-
-;        (if (== $m ())
-;            False
-;            True
-
-
-(= (exist_alternatives_on_level $notuselevelz)   
-; (collapse
-; (let*  
-;    (
-; act_trace should be in the order of the highest levels on top 
-; 
-;   ($aa
-;     (collapse 
-        (match &self  (, (act_trace $levelz $r $c $e10) (cell_candidate $r $c $cand ) )  (if (== (exist_as_false_candidate $levelz $r $c $cand) False )  ($levelz)  (empty)  )    )  
-
- ;       ) )
-  ;          )
-  ;    (if  (> (car-atom $aa  ) 0) (car-atom $aa  ) 0 )
-  ;  )
- )
-             
-
-
-;(= (exist_alternatives_on_level $levelx )   (match &self   (cell_candidate $r $c $num  )      
-;      (if (== (exist_as_false_candidate $levelx $r $c $num) True )    (empty) ($num)    ) 
-;       )  )
-; 
-
-
-
 
 ;(= (add_tmp_candidate (cell_candidate $num ) )  (add-atom &self (tmp_candidate $num) )  )
 ;(: map-expr (-> (-> $t $t) Expression Expression))
@@ -218,8 +180,8 @@
 
 
 
-(= (init_get_candidates )   
-  ( match &self   (sudoku_number $num   )      (cell_candidatex $num )  )
+(= (init_candidates )   
+  ( match &self   (sudoku_number $num   )      (cell_candidate $num )  )
   )
 
 
@@ -240,7 +202,7 @@
 
 (= (add_xnum (cell_xstate $r $c $sta ) )  (add-atom &self (tempnum $sta) )  )
 
-(= (add_tmp_candidate (cell_candidatex $num ) )  (add-atom &self (tmp_candidate $num) )  )
+(= (add_tmp_candidate (cell_candidate $num ) )  (add-atom &self (tmp_candidate $num) )  )
 
 (= (add_act_stack (action_rc $r $c ) )  (add-atom &self (act_rc $r $c) )  )
 
@@ -261,38 +223,11 @@
 ;!(if_exist_violation_backtrack_stack )
 ;!(puzzle_is_complete)
 
-; THIS IS TODO  this is the most complicated Query 
-; (= (find_level_where_there_were_alternatives)  (- (get_ycount) 1 )   )
-
-; TODO TODO this one should loop and decrement level until it finds 
-;  get_tmp_candidates_not_false
-; (= (find_level_where_there_were_alternatives $xlevel )  ($xlevel)   )
-; exist_as_false
-
-;(= (exist_alternatives_on_level $levelx )   (match &self   (cell_candidate $r $c $num  )      
-;      (if (== (exist_as_false_candidate $levelx $r $c $num) True )    (empty) ($num)    ) 
-;       )  )
-; act_trace $levelx $r $c $e10
-
-;(= (find_level_where_there_were_alternatives $ylevel )
-; (collapse 
-;    (let*  (
-;     ($yt (exist_alternatives_on_level $ylevel ) )
-;   )   
-;    (True)  
-;     (if (== $yt True) ($ylevel) (find_level_where_there_were_alternatives (- $ylevel 1) ) )  
-;    ) 
-;    )  
-; )
-
-
 
 (= (loop_sudoku_until_complete (coninu $yesno ) )
  (collapse 
     (let*  (
- ($qq (get_ycount) )
- ;($e0 (print (quote $qq) ) )
- ($e0 (println (format-args "- {} -" ($qq) ) ) )
+ ($e0 (println $yesno) )
  ($e1 (remove_violations) )
  ($tr (add-atom &self (violated 0 0 ) ) )
 ; ($e2 (init_action_stack) )
@@ -324,8 +259,6 @@
   ($e3 (remove-atom &self (act_rc $r $c) )  )
   ($e4 (init_check_cell  $r $c )  )
   ($e5 ( check_cell  $r $c  ) )
-  ($iu (tmp_candidates_to_cell_candidates $r $c) )
-
   ($levelx (increment_ycount ) )
 ; false_
 ;  ($e7 (: (tmp_candidate $num) $num ) )
@@ -334,7 +267,6 @@
 ;  ($e11 ( print $c  ) )
  ; levelx
 ;   ($e10 ( get_first_candidate  (collapse (get_tmp_candidates) )  ) )
-; should actually be Second candidate ? depends when you mark the last as false or not 
    ($e10 ( get_first_candidate  (collapse (get_tmp_candidates_not_false $levelx $r $c ) )  ) )
 ; He Should Fail here if it has  no valid candidates anymore for that $r $c !! and then it should continue to next action 
 ; It is not possible to put an IF statement here ?
@@ -421,40 +353,6 @@
        )
    )
 )
-
-
-; DEMO TEMP
-;(= (add_tmp_candidates $expr)
-;   (if (== $expr ()) ()
-;       (let* (($head (car-atom $expr))
-;              ($tail (cdr-atom $expr))
-;
-;              ($head-new (add_tmp_candidate $head))
-;              (if (== $head-new 8) ($head-new) ($tail-new (add_tmp_candidates $tail))    )
-;
-;              
-;             )
-;         (cons-atom $head-new $tail-new)
-;       )
-;   )
-;)
-
-
-
-
-(= (add_tmp_candidates $expr)
-   (if (== $expr ()) ()
-       (let* (($head (car-atom $expr))
-              ($tail (cdr-atom $expr))
-
-              ($head-new (add_tmp_candidate $head))
-              ($tail-new (add_tmp_candidates $tail))
-             )
-         (cons-atom $head-new $tail-new)
-       )
-   )
-)
-
  
 
 (= (add_a_stack $expr)
@@ -472,6 +370,18 @@
 
 
 
+(= (add_tmp_candidates $expr)
+   (if (== $expr ()) ()
+       (let* (($head (car-atom $expr))
+              ($tail (cdr-atom $expr))
+
+              ($head-new (add_tmp_candidate $head))
+              ($tail-new (add_tmp_candidates $tail))
+             )
+         (cons-atom $head-new $tail-new)
+       )
+   )
+)
 
 (= (remove_tmp_candidates $expr)
    (if (== $expr ()) ()
@@ -704,13 +614,7 @@
 ;(= (get_row_statex $row)  (collapse (match &self (, (column $w) (sudoku_puzzle_row_state $row $w $state)  )    $state    )  ) )
 ;(= (get_row_statey $row)   (collapse (match &self  (sudoku_puzzle_state $row $colx $state)    (cell_xstate $row $colx $state)    )  ) )
 
-
-;  ($iu (tmp_candidates_to_cell_candidates $r $c) )
-;   cell_candidate
-
-(= (tmp_candidates_to_cell_candidates $r $c)   (match &self   ( tmp_candidate $num  )  (add-atom &self (cell_candidate $r $c $num)  )  ) )
-
-
+ 
 (= (get_tmp_candidates)   (match &self   ( tmp_candidate $num  )      ($num    )          )  )
 
 
@@ -726,18 +630,14 @@
 
 
 ; exist match    exist_as_false_candidate $level $r $c $num
-;  cell_candidate  
-; (= (get_tmp_candidates_not_false $r $c $levelx )   (match &self   ( tmp_candidate $num  )      
-
-; is possible   to Make a NOT match  with false candidate 
-(= (get_tmp_candidates_not_false $r $c $levelx )   (match &self   (cell_candidate $r $c $num  )      
+(= (get_tmp_candidates_not_false $r $c $levelx )   (match &self   ( tmp_candidate $num  )      
 ;    ($num    )       
       (if (== (exist_as_false_candidate $levelx $r $c $num) True )    (empty) ($num)    ) 
 
        )  )
 
 (= (get_temp_nums)   (match &self   ( tempnum $num  )      ($num    )          )  )
-(= (get_temp_nums_as_candidates)   (match &self   ( tempnum $num  )      (cell_candidatex $num    )          )  )
+(= (get_temp_nums_as_candidates)   (match &self   ( tempnum $num  )      (cell_candidate $num    )          )  )
 
 
 ;(act_trace 0 0 0 0)
@@ -752,7 +652,7 @@
     (True)
     ) ) )
 
-(= (re_add_to_action_stack $levelx ) (match &self   ( act_trace $level $row $col $state )   
+(= (re_add_to_stack $levelx ) (match &self   ( act_trace $level $row $col $state )   
     (if (< $level $levelx )
     (add-atom &self (act_rc $row $col) )
     (True)
@@ -775,19 +675,15 @@
 ; set_ycount
 ; (= (set_false_candidates $levelx ) () )
  
-   
 
-(= (remove_cell_candidates $r $c)   (match &self   ( cell_candidate $r $c $candnum  )   (remove-atom &self (cell_candidate $r $c $candnum )  )    )  )
 
 
 
 (= (remove_temp_nums)   (match &self   ( tempnum $num  )   (remove-atom &self (tempnum $num )  )    )  )
 
 
- ;      (current_action $levelx $rx $cx $statex)
-;  ($eq34 (set_current_action_as_false ) )
 
-(= (set_current_action_as_false)   (match &self   ( current_action $levelx $rx $cx $statex )   (add-atom &self (false_candidate $levelx $rx $cx $statex )  )    )  )
+
 
 (= (remove_a_stack)   (match &self   ( act_rc $r $c  )   (remove-atom &self (act_rc $r $c )  )    )  )
 
@@ -966,7 +862,6 @@
 (= (init_check_cell $r $c )  (
  
  (collapse (let*  (
-  ($r0   (remove_cell_candidates $r $c )  )
   ($e1 (remove_tmp_candidates) )
   ($e2 (add_tmp_candidates (collapse (init_candidates) ) ) )
   ($e3 (remove_temp_nums) )
@@ -1028,10 +923,6 @@
  (collapse (let*  (
   ($e4 (init_check_cell  $r $c )  )
   ($e5 ( check_cell  $r $c  ) )
-  ($iu (tmp_candidates_to_cell_candidates $r $c) )
-;   cell_candidate
-
-
   ($e6 (count_list  (collapse (get_tmp_candidates) ) ) )
 ; DEBUG  
   ($e7 (if  (== $e6 2 )    (add-atom &self (violated $r $c) )    True   ) )
@@ -1056,6 +947,11 @@
 ; % minimum of 2 candidates
 ; Remaining_candidates = [ Last_used_candidate , _  | _Rest ] , !.
 
+; THIS IS TODO  this is the most complicated Query 
+; (= (find_level_where_there_were_alternatives)  (- (get_ycount) 1 )   )
+
+; TODO TODO this one should loop and decrement level until it finds 
+(= (find_level_where_there_were_alternatives $xlevel )  ($xlevel)   )
 
 
 ; set_ycount
@@ -1063,27 +959,18 @@
  (collapse (let*  (
   ($ew (remove_violations) )
   ($tr (add-atom &self (violated 0 0 ) ) )
-  ($eq34 (set_current_action_as_false ) )
-;  ($onelevelhigher (- (get_ycount) 1 ) )
-  ($levelpp  (get_ycount)   )
-;  ($e4 (find_level_where_there_were_alternatives $levelpp )  )
-
-; nondeterministic
-  ($e4 (exist_alternatives_on_level $levelpp)  )
-;  ($e4 (case (exist_alternatives_on_level )  ($var $var)  )  )
+  ($onelevelhigher (- (get_ycount) 1 ) )
+  ($e4 (find_level_where_there_were_alternatives $onelevelhigher )  )
   ($ex5 (set_ycount $e4 ) )
 
 ; match with 1 element result as atom needed
 ;  ($zy (eval (current_action $levelx $rx $cx $statex) ) )
 ;  ($tz (add-atom &self (false_candidate $levelx $rx $cx $statex ) ) )
-;      (current_action $levelx $rx $cx $statex)
- ; current_action $levelx $rx $cx $statex always succeeds because   current_action always exist 
   
-
   ($e6 (backtrack_to_level $e4 ) )
 ; TODO only assert the last applied as false 
 ;  ($e7 (set_false_candidates $e4 ) )
-  ($e31 (re_add_to_action_stack $e4 ) )
+  ($e31 (re_add_to_stack $e4 ) )
   ($e9 (remove_trace $e4 ) )
     
   ) 
