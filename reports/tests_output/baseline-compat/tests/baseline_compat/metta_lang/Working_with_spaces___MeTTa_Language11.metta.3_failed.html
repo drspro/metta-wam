@@ -30,7 +30,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-18 10:56:15+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-22 12:40:44+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -100,7 +100,7 @@ Script started on 2024-12-18 10:56:15+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 3  "Missed result: \"test\")]")
 P;HTML|
-;                                           (= 3  "0.04user 0.00system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 25724maxresident)k")
+;                                           (= 3  "0.03user 0.01system 0:00.04elapsed 95%CPU (0avgtext+0avgdata 25964maxresident)k")
 P;HTML|
 ;                                           (= 3  "0inputs+0outputs (0major+3112minor)pagefaults 0swaps")
 P;HTML|
@@ -126,7 +126,7 @@ Script started on 2024-12-18 10:56:15+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE11.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000330 secs. (329.65 microseconds) 
+; took 0.000353 secs. (352.71 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 124 ") 
@@ -154,7 +154,7 @@ Deterministic: ()
 test
 ; 
 ; EVAL TEST
-; took 0.000903 secs. (902.69 microseconds) 
+; took 0.000891 secs. (890.84 microseconds) 
 
   !(assertEqualToResult 
     (bind! &res 
@@ -189,7 +189,7 @@ Deterministic: (println "xx 125 ")
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE11.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (260.19 microseconds) 
+; took 0.000254 secs. (253.95 microseconds) 
 
   !(assertEqualToResult 
     (&res) ())
@@ -227,7 +227,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE11.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000199 secs. (198.78 microseconds) 
+; took 0.000190 secs. (189.95 microseconds) 
 
   !(assertEqualToResult 
     (&res) ())
@@ -241,7 +241,7 @@ Deterministic: ((Error  (got  ((&res))) (expected  ())))
 ((Error  (got  ((&res))) (expected  ())))]
 ;;;[()]
 <span class="ansi32"
->% 193,645 inferences, 0.063 CPU in 0.063 seconds (100% CPU, 3091772 Lips)
+>% 193,645 inferences, 0.061 CPU in 0.061 seconds (100% CPU, 3152247 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language11.metta  0)
 <span class="ansi1"
@@ -281,7 +281,7 @@ Deterministic: ((Error  (got  ((&res))) (expected  ())))
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-18 10:56:20+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-22 12:40:49+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

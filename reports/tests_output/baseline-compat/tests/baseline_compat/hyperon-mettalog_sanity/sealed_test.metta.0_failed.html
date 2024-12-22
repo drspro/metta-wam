@@ -37,7 +37,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-18 10:34:09+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-22 12:19:11+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -124,7 +124,7 @@ Script started on 2024-12-18 10:34:09+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000260 secs. (259.67 microseconds) 
+; took 0.000266 secs. (265.62 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -155,7 +155,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000149 secs. (148.97 microseconds) 
+; took 0.000146 secs. (146.10 microseconds) 
 
   !(assertEqualToResult 
     (sealed 
@@ -184,7 +184,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000892 secs. (891.82 microseconds) 
+; took 0.000894 secs. (894.31 microseconds) 
 
   !(assertEqualToResult 
     (let $x 
@@ -217,7 +217,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.04</h3>
 ; 
 ; EVAL TEST
-; took 0.001 secs. (1.30 milliseconds) 
+; took 0.001 secs. (1.29 milliseconds) 
 
   !(assertEqual 
     (let 
@@ -256,7 +256,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000403 secs. (402.76 microseconds) 
+; took 0.000392 secs. (392.05 microseconds) 
 
   !(assertEqualToResult 
     (callsealer $x $y) 
@@ -282,7 +282,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.06</h3>
 ; 
 ; EVAL TEST
-; took 0.000427 secs. (427.12 microseconds) 
+; took 0.000403 secs. (402.70 microseconds) 
 
   !(assertEqualToResult 
     (callsealer 10 25) 
@@ -316,7 +316,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000429 secs. (428.96 microseconds) 
+; took 0.000391 secs. (390.87 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 5 $y) 
@@ -341,7 +341,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000437 secs. (437.29 microseconds) 
+; took 0.000424 secs. (424.08 microseconds) 
 
   !(assertEqualToResult 
     (callsealer1 $x $y) 
@@ -376,7 +376,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000422 secs. (421.69 microseconds) 
+; took 0.000364 secs. (363.59 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x 4) 
@@ -402,7 +402,7 @@ Deterministic: ()
 >;; HYPERON-METTALOG-SANITY.SEALED-TEST.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000422 secs. (421.76 microseconds) 
+; took 0.000393 secs. (392.71 microseconds) 
 
   !(assertEqualToResult 
     (callsealer2 $x $y) 
@@ -418,7 +418,7 @@ Deterministic: ()
 ()]
 ;;;both $x and $y sealed
 <span class="ansi32"
->% 626,069 inferences, 0.165 CPU in 0.165 seconds (100% CPU, 3793862 Lips)
+>% 626,069 inferences, 0.161 CPU in 0.161 seconds (100% CPU, 3900035 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/hyperon-mettalog_sanity/sealed_test.metta  0)
 <span class="ansi1"
@@ -458,7 +458,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-18 10:34:14+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-22 12:19:16+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
