@@ -45,7 +45,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-22 12:40:30+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-24 10:15:49+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -123,9 +123,9 @@ Script started on 2024-12-22 12:40:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 10  "[()]")
 P;HTML|
-;                                           (= 11  "0.03user 0.01system 0:00.05elapsed 98%CPU (0avgtext+0avgdata 26212maxresident)k")
+;                                           (= 11  "0.04user 0.01system 0:00.05elapsed 100%CPU (0avgtext+0avgdata 25940maxresident)k")
 P;HTML|
-;                                           (= 11  "0inputs+0outputs (0major+3145minor)pagefaults 0swaps")
+;                                           (= 11  "0inputs+0outputs (0major+3144minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language1.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language1.metta)
 
@@ -160,7 +160,7 @@ Script started on 2024-12-22 12:40:30+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000348 secs. (348.06 microseconds) 
+; took 0.000363 secs. (363.18 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 96 ") 
@@ -186,7 +186,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000276 secs. (276.12 microseconds) 
+; took 0.000309 secs. (308.69 microseconds) 
 
   !(assertEqualToResult 
     (foo) 
@@ -218,7 +218,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000240 secs. (240.23 microseconds) 
+; took 0.000237 secs. (236.89 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 97 ") 
@@ -247,7 +247,7 @@ Deterministic: ()
     (foo) 3)
 </span>; 
 ; EVAL TEST
-; took 0.002 secs. (1.91 milliseconds) 
+; took 0.002 secs. (1.98 milliseconds) 
 
   !(assertEqualToResult 
     (add-foo-eq (+ 1 2)) 
@@ -279,7 +279,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.05</h3>
 ; 
 ; EVAL TEST
-; took 0.000214 secs. (213.78 microseconds) 
+; took 0.000236 secs. (235.51 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 98 ") 
@@ -308,7 +308,7 @@ Deterministic: ()
     (foo) 7)
 </span>; 
 ; EVAL TEST
-; took 0.001 secs. (1.48 milliseconds) 
+; took 0.002 secs. (1.52 milliseconds) 
 
   !(assertEqualToResult 
     (add-foo-eq (+ 3 4)) 
@@ -340,7 +340,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.07</h3>
 ; 
 ; EVAL TEST
-; took 0.000198 secs. (197.77 microseconds) 
+; took 0.000196 secs. (195.57 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 99 ") 
@@ -366,7 +366,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.08</h3>
 ; 
 ; EVAL TEST
-; took 0.000194 secs. (193.62 microseconds) 
+; took 0.000190 secs. (190.47 microseconds) 
 
   !(assertEqualToResult 
     (foo) 
@@ -399,7 +399,7 @@ Deterministic: ((Error  (got  ((foo))) (expected  (3 7))))
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.09</h3>
 ; 
 ; EVAL TEST
-; took 0.000227 secs. (226.96 microseconds) 
+; took 0.000199 secs. (199.35 microseconds) 
 
   !(assertEqualToResult 
     (println "xx 100 ") 
@@ -428,7 +428,7 @@ Deterministic: ()
 >;; METTA-LANG.WORKING-WITH-SPACES---METTA-LANGUAGE1.10</h3>
 ; 
 ; EVAL TEST
-; took 0.000185 secs. (184.94 microseconds) 
+; took 0.000174 secs. (173.52 microseconds) 
 
   !(assertEqualToResult 
     (match &self 
@@ -447,7 +447,7 @@ Deterministic: ((Error  (got  ((quote 3) (quote 7))) (expected  ((quote (+ 1 2))
 ((Error  (got  ((quote 3) (quote 7))) (expected  ((quote (+ 1 2)) (quote (+ 3 4))))))]
 ;;;[(foo)]
 <span class="ansi32"
->% 348,225 inferences, 0.096 CPU in 0.096 seconds (100% CPU, 3615289 Lips)
+>% 348,237 inferences, 0.098 CPU in 0.098 seconds (100% CPU, 3542633 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Working_with_spaces___MeTTa_Language1.metta  0)
 <span class="ansi1"
@@ -487,7 +487,7 @@ Deterministic: ((Error  (got  ((quote 3) (quote 7))) (expected  ((quote (+ 1 2))
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-22 12:40:35+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-24 10:15:54+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>

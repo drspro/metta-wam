@@ -27,7 +27,7 @@
 <body class="body_foreground body_background" style="font-size: normal;" >
 <pre class="ansi2html-content"
 >
-Script started on 2024-12-22 12:32:33+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
+Script started on 2024-12-24 10:07:48+00:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="-1" LINES="-1"]
 P;HTML|
 ;           (set_option_value  prolog false)
 
@@ -97,9 +97,9 @@ Script started on 2024-12-22 12:32:33+00:00 [TERM="xterm-256color" TTY="/dev/pts
 P;HTML|
 ;                                           (= 4  "Missed result: (-> $t $t Atom))]")
 P;HTML|
-;                                           (= 4  "0.03user 0.01system 0:00.04elapsed 97%CPU (0avgtext+0avgdata 26228maxresident)k")
+;                                           (= 4  "0.03user 0.01system 0:00.04elapsed 100%CPU (0avgtext+0avgdata 26248maxresident)k")
 P;HTML|
-;                                           (= 4  "0inputs+0outputs (0major+3119minor)pagefaults 0swaps")
+;                                           (= 4  "0inputs+0outputs (0major+3125minor)pagefaults 0swaps")
 P;HTML|
 ;                                          (load_answer_file  /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language6.metta.answers /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language6.metta)
 
@@ -126,7 +126,7 @@ Script started on 2024-12-22 12:32:33+00:00 [TERM="xterm-256color" TTY="/dev/pts
 >;; METTA-LANG.CONTROLLING-PATTERN-MATCHING---METTA-LANGUAGE6.01</h3>
 ; 
 ; EVAL TEST
-; took 0.000223 secs. (223.26 microseconds) 
+; took 0.000233 secs. (233.40 microseconds) 
 
   !(assertEqualToResult 
     (get-type (foo $x)) 
@@ -154,7 +154,7 @@ Deterministic: ((Error  (got  (())) (expected  (Bool))))
 >;; METTA-LANG.CONTROLLING-PATTERN-MATCHING---METTA-LANGUAGE6.02</h3>
 ; 
 ; EVAL TEST
-; took 0.000188 secs. (188.48 microseconds) 
+; took 0.000200 secs. (200.35 microseconds) 
 
   !(assertEqualToResult 
     (get-type (+ $x 1)) 
@@ -182,7 +182,7 @@ Deterministic: ((Error  (got  (())) (expected  (Number))))
 >;; METTA-LANG.CONTROLLING-PATTERN-MATCHING---METTA-LANGUAGE6.03</h3>
 ; 
 ; EVAL TEST
-; took 0.000144 secs. (144.22 microseconds) 
+; took 0.000157 secs. (156.61 microseconds) 
 
   !(assertEqualToResult 
     (get-type =) 
@@ -192,7 +192,7 @@ Deterministic: ((Error  (got  (())) (expected  (Number))))
 >  (loonit_failureR  
     (equal_enough_for_test  
       ( (-> Atom Atom %Undefined%)) 
-      ( (-> $_661208 $_661208 Atom))))
+      ( (-> $_661306 $_661306 Atom))))
 </span>
 Deterministic: ((Error  (got  ((-> Atom Atom %Undefined%))) (expected  ((-> $t $t Atom)))))
   ( (Error  
@@ -200,7 +200,7 @@ Deterministic: ((Error  (got  ((-> Atom Atom %Undefined%))) (expected  ((-> $t $
         ( (-> Atom Atom %Undefined%))) 
       (expected  
 
-        ( (-> $_661208 $_661208 Atom)))))]
+        ( (-> $_661306 $_661306 Atom)))))]
 ;;;! (= (foo $x) (+ $x 1)) 
 ;;; BadType
 ;;; ready 
@@ -219,7 +219,7 @@ Deterministic: ((Error  (got  ((-> Atom Atom %Undefined%))) (expected  ((-> $t $
 >;; METTA-LANG.CONTROLLING-PATTERN-MATCHING---METTA-LANGUAGE6.04</h3>
 ; 
 ; EVAL TEST
-; took 0.000049 secs. (49.24 microseconds) 
+; took 0.000048 secs. (47.88 microseconds) 
 
   !(assertEqualToResult 
     (= 
@@ -233,17 +233,17 @@ Deterministic: ((Error  (got  ((-> Atom Atom %Undefined%))) (expected  ((-> $t $
 >  (loonit_success  
     (equal_enough_for_test  
       ( (= 
-          (foo $_690000) 
-          (+ $_690000 1))) 
+          (foo $_690098) 
+          (+ $_690098 1))) 
       ( (= 
-          (foo $_690000) 
-          (+ $_690000 1)))))
+          (foo $_690098) 
+          (+ $_690098 1)))))
 </span>
 Deterministic: ()
 ()]
 ;;;  !(assertEqualToResult ( )  (  )  ) 
 <span class="ansi32"
->% 240,080 inferences, 0.073 CPU in 0.073 seconds (100% CPU, 3293679 Lips)
+>% 240,092 inferences, 0.078 CPU in 0.078 seconds (100% CPU, 3086814 Lips)
 </span>P;HTML|
 ;                         (= /home/runner/work/metta-wam/metta-wam/tests/baseline_compat/metta_lang/Controlling_pattern_matching___MeTTa_Language6.metta  0)
 <span class="ansi1"
@@ -283,7 +283,7 @@ Deterministic: ()
     (unwind  
       (halt  7)))
 </span>
-Script done on 2024-12-22 12:32:38+00:00 [COMMAND_EXIT_CODE="7"]
+Script done on 2024-12-24 10:07:53+00:00 [COMMAND_EXIT_CODE="7"]
 
 </pre>
 </body>
